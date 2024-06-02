@@ -7,6 +7,6 @@ Alexander Johan Pramudito - 22/492990/TK/53976
 
 ## Task 2: DB API Development
 1. Untuk memulai penggunaan, lakukan git clone pada repository di bawah.
-2. Melakukan 'npm i' untuk menginstall dependensi yang dibutuhkan. (Dependensi yang digunakan adalah express, body-parser, pg, dan pg-promise)
+2. Melakukan 'npm i' untuk menginstall dependensi yang dibutuhkan (Dependensi yang digunakan adalah express, body-parser, pg, dan pg-promise).
 3. Mengganti user, host, database, password, dan port yang digunakan pada 'src/db.js'.
 4. Menjalankan node dengan cara melakukan "node src/index.js".
