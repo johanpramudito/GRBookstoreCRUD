@@ -1,4 +1,4 @@
-# **Proyek Akhir Teknologi Basis Data**
+# **Proyek Akhir Teknologi Basis Data 2024**
 
 ## Task 1: DB Expansion and Implementation
 - Buka folder ERD untuk melihat Entity Relational Diagram.
