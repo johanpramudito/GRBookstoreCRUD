@@ -24,10 +24,12 @@ const searchBooks = (criteria) => {
 };
 
 const getBookByAuthor = `
-    SELECT b.* FROM "Book" b
+    SELECT b.*
+    FROM "Book" b
     JOIN "Book_Author" ba ON b."Book_ID" = ba."Book_ID"
     JOIN "Author" a ON ba."Author_ID" = a."Author_ID"
-    WHERE a."First_Name" ILIKE $1 OR a."Last_Name" ILIKE $1`;
+    WHERE a."First_Name" ILIKE $1 OR a."Last_Name" ILIKE $1;
+`;
 
 module.exports = {
     getBooks,

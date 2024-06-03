@@ -30,7 +30,6 @@ const createBook = async (req, res) => {
 
     try {
         const result = await pool.query(queries.createBook, values);
-        res.status(201).json(result.rows[0]);
         res.status(201).json({ message: "Book created successfully" });
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -48,7 +47,6 @@ const updateBook = async (req, res) => {
 
     try {
         const result = await pool.query(queries.updateBook, values);
-        res.status(200).json(result.rows[0]);
         res.status(200).json({ message: "Book updated successfully" });
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -63,8 +61,7 @@ const deleteBook = async (req, res) => {
 
     try {
         const result = await pool.query(queries.deleteBook, [id]);
-        res.status(200).json(result.rows[0]);
-        res.status(200).json({ message: "Book deleted successfully" });
+        res.status(200).json({message: "Book deleted successfully"});
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -86,7 +83,7 @@ const getBookByAuthor = async (req, res) => {
     const author = `%${req.params.author}%`;
 
     try {
-        const result = await pool.query(queries.getBooksByAuthor, [author]);
+        const result = await pool.query(queries.getBookByAuthor, [author]);
         res.status(200).json(result.rows);
     } catch (error) {
         res.status(500).json({ error: error.message });
