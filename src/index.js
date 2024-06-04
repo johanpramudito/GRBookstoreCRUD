@@ -1,6 +1,6 @@
 const express = require('express');
 const BookRoutes = require('./book/routes.js');
-const WishlistRoutes = require('./wishlists/routes.js');
+const WishlistRoutes = require('./wishlist/routes.js');
 const app = express();
 const PORT = 5000
 

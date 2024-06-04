@@ -1,10 +1,10 @@
 const { get } = require("./routes");
 
-const getBooks = "SELECT * FROM \"Book\"";
+const getBooks = 'SELECT * FROM "Book"';
 const getBookByID = 'SELECT * FROM "Book" WHERE "Book_ID" = $1';
-const createBook = "INSERT INTO \"Book\" (\"ISBN\", \"Name\", \"Release_Year\", \"Print_Year\", \"Price\", \"Description\", \"Size\", \"Language_ID\", \"Publisher_ID\") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *";
-const updateBook = "UPDATE \"Book\" SET \"ISBN\" = $1, \"Name\" = $2, \"Release_Year\" = $3, \"Print_Year\" = $4, \"Price\" = $5, \"Description\" = $6, \"Size\" = $7, \"Language_ID\" = $8, \"Publisher_ID\" = $9 WHERE \"Book_ID\" = $10 RETURNING *";
-const deleteBook = "DELETE FROM \"Book\" WHERE \"Book_ID\" = $1 RETURNING *";
+const createBook = 'INSERT INTO "Book" ("ISBN", "Name", "Release_Year", "Print_Year", "Price", "Description", "Size", "Language_ID", "Publisher_ID") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *';
+const updateBook = 'UPDATE "Book" SET "ISBN" = $1, "Name" = $2, "Release_Year" = $3, "Print_Year" = $4, "Price" = $5, "Description" = $6, "Size" = $7, "Language_ID" = $8, "Publisher_ID" = $9 WHERE "Book_ID" = $10 RETURNING *';
+const deleteBook = 'DELETE FROM "Book" WHERE "Book_ID" = $1 RETURNING *';
 
 const searchBooks = (criteria) => {
     let query = 'SELECT * FROM "Book" WHERE';
